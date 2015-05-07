@@ -2,14 +2,103 @@
 <html>
 	<head>
 		<title>Answer Dragon Capital Question</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
-		
+	<body>		
+		<div class="wrapper">
+			<header>
+				For answering question from facebook 
+				<a href="https://www.facebook.com/dragoncapitalid/photos/a.1580113548907707.1073741828.1578269852425410/1589513411301054/?type=1&theater">photo</a>
+			</header>
+			<h1 class="easyLook">Number 1</h1>
+			<blockquote class="easyLook">
+				formula for Consecutive Number Sequences form <a href="http://mathworld.wolfram.com/ConsecutiveNumberSequences.html">here</a>
+			</blockquote>
+			<table class="easyLook">
+				<thead>
+					<tr>
+						<td><i>d</i></td>
+						<td><i>n</i> range</td>
+						<td>digits</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>						
+						<td>1</td>
+						<td>1 - 9</td>
+						<td>n</td>
+					</tr>
+					<tr>						
+						<td>2</td>
+						<td>10 - 99</td>
+						<td>9 + 2(n-9)</td>
+					</tr>
+					<tr>						
+						<td>3</td>
+						<td>100 - 999</td>
+						<td>9 + 90.2 + 3(n-99)</td>
+					</tr>
+					<tr>						
+						<td>4</td>
+						<td>1000 - 9999</td>
+						<td>9 + 90.2 + 900.3 + 4(n-999)</td>
+					</tr>
+					<tr>						
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<!-- for 1.000.000 -->
+					<tr>						
+						<td>7</td>
+						<td>1000000 - 9999999</td>
+						<td>9 + 90.2 + 900.3 + 9000.4 + 90000.5 + 900000.6 + 7(n-999999)</td>
+					</tr>
+					<tr>						
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<!-- for 1.000.000.000 -->
+					<tr>						
+						<td>10</td>
+						<td>1000000000 - 9999999999</td>
+						<td>9 + 90.2 + 900.3 + 9000.4 + 90000.5 + 900000.6 + 9000000.7 + 90000000.8 + 900000000.9 + 10(n-999999999)</td>
+					</tr>
+					<tr>						
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<!-- for 1.000.000.000.000 -->
+					<tr>						
+						<td>13</td>
+						<td>1000000000000 - 9999999999999</td>
+						<td>9 + 90.2 + 900.3 + 9000.4 + 90000.5 + 900000.6 + 9000000.7 + 90000000.8 + 900000000.9 + 9000000000.10 + 90000000000.11 + 900000000000.12 + 13(n-999999999999)</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="answerNo1 ">
+				<h1>Answer</h1>
+				<div id="juta"></div>
+				<div id="milyar"></div>
+				<div id="triliun"></div>
+			</div>
+		</div>
 		<script>
-		
-			var cons = 9 + 90*2 + 900*3 + 9000*4 + 90000*5 + 900000*6 + 7*(1000000-999999);
+			
+			//1.000.000
+			var juta = 9 + 90*2 + 900*3 + 9000*4 + 90000*5 + 900000*6 + 7*(1000000-999999);
+			
+			//1.000.000.000
+			var milyar = 9 + 90*2 + 900*3 + 9000*4 + 90000*5 + 900000*6 + 9000000*7 + 90000000*8 + 900000000*9 + 10*(1000000000-999999999);
+			
+			//1.000.000.000.000
+			var triliun = 9 + 90*2 + 900*3 + 9000*4 + 90000*5 + 900000*6 + 9000000*7 + 90000000*8 + 900000000*9 + 9000000000*10 + 90000000000*11 + 900000000000*12 + 13*(1000000000000-999999999999);
 
-			console.log(cons);
+			document.getElementById('juta').innerHTML = 'Digit 1.000.000 = ' + juta ;
+			document.getElementById('milyar').innerHTML = 'Digit 1.000.000.000 = ' + milyar ;
+			document.getElementById('triliun').innerHTML = 'Digit 1.000.000.000.000 = ' + triliun ;
 
 		</script>
 	</body>
